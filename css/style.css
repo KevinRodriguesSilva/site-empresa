@@ -1,0 +1,339 @@
+@font-face {
+    font-family: cream;
+    src: url(../fonts/cream-DEMO.ttf) format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+
+}
+
+body {
+    background-color: #282828;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    width: 175px;
+    height: 53px;
+}
+/* fazer o main*/
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #23213A;
+    height: 12vh;
+    font-family: cream;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 2px;
+    margin-left: 30px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #23213E;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+    display: flex;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+  
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+  
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* PARTE DO KEVIN - HOME - PROJETOS */
+
+#home{
+    height: 90vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #282828;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+}
+.banner{
+    height: 78.9vh;
+    width: 55%;
+    display: flex;
+    justify-content: center; 
+    margin: 0 auto;
+    margin-top: 5%;
+
+}
+.img-banner{
+    width: 40%;
+    height: 70vh;
+    margin-top: 4%;
+    object-fit:fill;
+    border: 2px solid #282828;
+}
+
+.text h1{
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    font-size: 70px;
+}
+
+.text{
+    color: white;
+    width: 30%;
+    height:auto;
+    margin-top: 7%;
+    margin-left: 10%;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-family: cream;
+}
+
+#projetos{
+    background-color: #A3A3A3;
+    text-align: center;
+    height: 85vh;
+}
+
+.container2{
+    width: 100%;
+    display: column;
+    justify-content: center;
+    align-content: center;
+    padding-top: 5%;
+}
+
+.text2{
+    color: white;
+    width: 100%;
+    height:auto;
+    margin-top: 0;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-family: cream;
+}
+
+.card{
+    background: #fff;
+    width: 20%;
+    height: 50vh;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px gray;
+    margin: 0 auto;
+}
+
+.topCard{
+    width: 100%;
+    height: 10vh;
+    font-family: cream;
+}
+.midCard{
+    width: 100%;
+    height: 30vh;
+}
+.bottomCard{
+    width:100%;
+    height:10vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-card{
+    width: 90%;
+    height: 30vh;
+}
+.btnCard{
+    font-family: cream;
+    box-shadow: 2px 2px 2px black;
+    background: #23213A ;
+    width: 50%;
+    height: 5vh;
+}
+/* PARTE DO NIKOLAS TELA DE CADASTRO */
+
+.class-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.informativo {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin: 40px 0;
+    margin-top: 7%;
+}
+
+.informativo img {
+    max-width: 500px;
+    max-height: 540px;
+}
+
+.formulario {
+    display: flex;   
+    align-items: center;
+    min-width: 500px;
+    margin: 10px;
+    font-size: 4vh;
+    font-family: cream;
+    text-align: center;
+    color: white;
+}
+
+.formulario h1 {
+    font-weight: normal;
+}
+
+.campos input{
+    margin-bottom: 20px;
+    width: 80%;
+    height: 5vh;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    font-family: cream;
+    font-size: 3vh;
+    color: white;
+}
+
+.formulario input::placeholder{
+    font-family: cream;
+    font-size: 3vh;
+    color: white;
+}
+
+.formulario input:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    font-family: cream;
+    font-size: 3vh;
+    color: white;
+}
+
+.checkbox {
+   display: inline-flex;
+   font-size: 3vh;
+   
+}
+
+.checkbox label{
+    text-align: left;
+    font-family: cream;
+    margin-left: 5px;
+}
+
+.check {
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    margin-left: 10%;
+    border-radius: 20px;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.botao button {
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: #1f7499;
+    color: white;
+    font-family: cream;
+    font-size: 3vh;
+    transition: background-color 0.2s ease-in;
+    width: 40%;
+    height: 8vh;
+}
+
+.botao button:hover {
+    background-color: #2C9DCF;
+}

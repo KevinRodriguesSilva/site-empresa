@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./css/style.css" rel="stylesheet">
+
+        <title> Cadastro </title>
+    </head>
+
+    <body>
+        <header> 
+            <nav>
+                <a href="/"><img src="img/logo-biovolve.png" class="logo"></a>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>                    
+                </div>
+                <ul class="nav-list">
+                    <li id="link-home"><a href="index.html"> Home </a></li>
+                    <li id="link-projetos"><a href="#projetos"> Projetos </a></li>
+                    <li id="link-doar"><a href="#doar"> Doar</a></li>
+                    <li id="link-sobre"><a href="#sobre"> Sobre Nós </a></li>
+                    <li id="link-suporte"><a href="#suporte"> Suporte </a></li>
+                    <li style="float:right"><a class="active" href="cadastro.html">Entrar</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!-- FORMULARIO COMECA AQUI-->
+        <div class="class-form">
+            <div class="informativo">
+                <img src="./img/Ativo 15.png">
+            </div>
+
+            
+            <div class="formulario">
+                <form method="post" action="#">
+
+                    <section class="campos">
+                        <h1>Cadastrar-se!</h1>
+                    
+                        <input name="nome" type="text" placeholder="Nome"> <br> 
+                        
+                        <input class="email" name="email" type="email" placeholder="E-mail"> <br>
+                        
+                        <input class="senha" name="senha" type="password" placeholder="Senha"> <br>
+                        
+                        <input class="confirmSenha" name="confirmSenha" type="password" placeholder="Confirme a senha"> <br>
+                        
+                    </section>
+
+                    <section class="checkbox">
+                        <input class="check" type="checkbox" name="check"> 
+                        <label for="check"> Gostaria de receber informações sobre novos projetos?</label>
+                    </section>
+
+                    <section class="botao">
+                        <button type="submit"> Cadastrar </button>
+                    </section>
+                </form>
+            </div>
+        </div>
+        <script src="js/mobile-nav.js"></script>
+    </body>
+</html>
