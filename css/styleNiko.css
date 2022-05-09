@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+@font-face {
+    font-family: ocr;
+    src: url(../fonts/OCR\ A\ Extended\ Regular.ttf) format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+
+}
+
+body {
+    background-color: #3a375e;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    width: 100%;
+}
+/* fazer o main*/
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #23213A;
+    height: 12vh;
+    font-family: ocr;
+    text-transform: uppercase;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 2px;
+    margin-left: 30px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #23213A;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+    display: flex;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+  
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+  
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* PARTE DO NIKOLAS TELA DE CADASTRO */
+
+.class-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.informativo {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin: 40px 0;
+    margin-top: 7%;
+    min-height: 500px;
+}
+
+.informativo img {
+    max-width: 50vw;
+    max-height: 80vh;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.formulario {
+    display: flex;   
+    background-color: #23213A;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: #11101E 7px 7px 1px;
+    align-items: center;
+    min-width: 500px;
+    min-height: 400px;
+    margin: 100px;
+    font-size: 4vh;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.formulario h1 {
+    font-weight: normal;
+}
+
+.campos {
+    min-width: 500px;
+}
+
+.campos input{
+    margin-bottom: 20px;
+    width: 80%;
+    height: 5vh;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vh;
+    color: white;
+}
+
+.formulario input::placeholder{
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vh;
+    color: white;
+}
+
+.formulario input:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vh;
+    color: white;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.botao button {
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #f2f9fc;
+    background-color: #23213A;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vh;
+    transition: background-color 0.2s ease-in;
+    width: 40%;
+    height: 8vh;
+}
+
+.botao button:hover {
+    background-color: #2C9DCF;
+    border: none;
+}
+
+.navbar--fixada{
+    position:fixed;
+    right:0;
+    left:0;
+    width:100%;
+    box-shadow: 0px 2px 7px black;    
+}

@@ -42,3 +42,29 @@ const mobileNavBar = new MobileNavBar(
     ".nav-list li",
 );
 mobileNavBar.init();
+
+function iniciar(){
+    var navbar = document.querySelector('.navbar');
+    var navEspaco = document.querySelector('.nav-espaco');
+    var navOffset = navbar.offsetTop;
+
+    function verificarCabecalho() {
+        var scrollTop = window.scrollY;
+        var navAltura = navbar.offsetHeight;
+
+        if(scrollTop > navOffset) {
+            navbar.classList.add('navbar--fixada');
+        
+            navEspaco.style.height = navAltura + 'px';
+
+        }else{
+            navbar.classList.remove('navbar--fixada');
+
+            navEspaco.style.height = 0;
+        }
+    }
+
+    window.addEventListener('scroll', verificarCabecalho);
+    window.addEventListener('resize', verificarCabecalho);
+}
+window.addEventListener('load', iniciar);
