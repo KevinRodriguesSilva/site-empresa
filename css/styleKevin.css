@@ -46,8 +46,9 @@ nav {
     height: 12vh;
     text-transform: uppercase;
     font-family: ocr;
+    position: relative;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), #23213acc, #23213A );
 }
-
 .nav-list {
     list-style: none;
     display: flex;
@@ -85,6 +86,8 @@ nav {
 @media (max-width: 999px) {
     body {
         overflow-x: hidden;
+        margin: 0;
+        padding: 0;
     }
     .nav-list {
         position: absolute;
@@ -140,10 +143,16 @@ nav {
 /*fim da configuração da navbar*/
 
 .banner-espaco{
-    background-color: yellow;
-    height: 14vh;
-    margin-top: -90px
+    height: 40vh;
+    margin-top: -6%;
+    width:100%;
 }
+
+.banner-img{
+    width: 100%;
+    height: 130vh;
+}
+
 
 /*começo da configuração da main*/
 
@@ -176,20 +185,21 @@ nav {
     object-fit:fill;
 }
 
-.text h1{
-    text-decoration: underline;
-    text-decoration-color: #fff;
-    font-size: 70px;
+.text p{
+    width: 50px;
+    border-bottom: 5px solid #fff;
+    border-top: 5px solid #fff;
+    font-size: 80px;
+    letter-spacing:5px;
 }
 
 .text{
     color: white;
-    width: 30%;
+    width: 100%;
     height:auto;
-    margin-left: 10%;
     text-align: center;
     font-size: 30px;
-    letter-spacing: 2px;
+
 }
 
 /*fim da configuração da Home*/
